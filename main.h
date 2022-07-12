@@ -3,6 +3,9 @@
 
 
 #include <stdarg.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 
 int _putchar(char c);
@@ -23,6 +26,13 @@ int print_base16_upper_lower(va_list arg, char *representation);
 int loop_format(va_list arg, const char *string);
 int call_function_manager(char aux, va_list arg);
 int check_percent(int *flag, char aux);
+void strapd(char buf[], char, int *);
+void oct_f(char buf[], unsigned int j, int *);
+void hex_f(char buf[], unsigned int j, char s, int *);
+void lim_itoa(char buf[], char a[], unsigned int n[], unsigned int j, int *);
+void add_zeros(char buf[], int n, int p, int *);
+
+
 
 /**
  * struct identifierStruct - structure definition of a printTypeStruct
