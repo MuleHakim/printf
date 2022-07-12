@@ -1,4 +1,8 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+
 /**
  * _printf - printf
  * @format: const char pointer
