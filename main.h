@@ -1,6 +1,10 @@
 #ifndef HEADER_MAIN
 #define HEADER_MAIN
+
+
 #include <stdarg.h>
+
+
 int _putchar(char c);
 void _puts(char *str);
 int _strlen(char *s);
@@ -19,4 +23,17 @@ int print_base16_upper_lower(va_list arg, char *representation);
 int loop_format(va_list arg, const char *string);
 int call_function_manager(char aux, va_list arg);
 int check_percent(int *flag, char aux);
+
+/**
+ * struct identifierStruct - structure definition of a printTypeStruct
+ * @indentifier: type
+ * @printer: function to print
+ */
+typedef struct identifierStruct
+{
+char *indentifier;
+int (*printer)(va_list);
+} identifierStruct;
+
+
 #endif
