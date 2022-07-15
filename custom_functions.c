@@ -69,6 +69,6 @@ char *convert_to(char representation[], unsigned int num, int base)
 		mod = num % base;
 		*--ptr = representation[mod];
 		num /= base;
-	} hile (num != 0);
+	} while (num != 0);
 	return (ptr);
 }
