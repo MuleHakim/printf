@@ -6,4 +6,6 @@
  * Return: 0 on success and -1 error and errno is set appropiately
  */
 int _putchar(char c)
+{
 	return (write(1, &c, 1));
+}
