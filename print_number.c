@@ -13,6 +13,7 @@ void print_number(char buf[], int n, int *bp)
 int quo;
 int i;
 int p;
+
 i = 0;
 quo = n;
 if (n < 0)
@@ -32,12 +33,8 @@ i++;
 strapd(buf, (quo + '0'), bp);
 p = _pow10(i);
 n = (n - (quo *p));
-<<<<<<< HEAD
 add_zeros(buf, n, p, bp);
-=======
-add_zeros(buf, n, p);
 }
->>>>>>> 8154364b0c0f967330706e3c921eb4bd80c548cb
 if (n >= 10)
 print_number(buf, n, bp);
 else
@@ -56,6 +53,7 @@ int _pow10(int n)
 {
 int i;
 int tmp;
+
 if (n == 0)
 return (0);
 tmp = 10;
@@ -75,6 +73,7 @@ return (tmp);
 void add_zeros(char buf[], int n, int p, int *bp)
 {
 int i;
+
 for (i = p / 10; i > 1 && n < i; i = i / 10)
 strapd(buf, 0 + '0', bp);
 return;
@@ -92,6 +91,7 @@ void print_usigned_number(char buf[], unsigned int n, int *bp)
 unsigned int quo;
 int i;
 int p;
+
 i = 0;
 quo = n;
 while (quo >= 10)
