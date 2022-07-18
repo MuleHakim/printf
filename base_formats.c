@@ -11,7 +11,9 @@
 void binary_f(char buf[], unsigned int i, int *bp)
 {
 unsigned int rem;
+
 rem = i % 2;
+
 if (i == 1)
 {
 strapd(buf, (1 + '0'), bp);
@@ -34,6 +36,7 @@ return;
 void oct_f(char buf[], unsigned int j, int *bp)
 {
 int rem;
+
 if (j < 8)
 {
 strapd(buf, (j + '0'), bp);
@@ -60,6 +63,7 @@ unsigned int rem;
 int i;
 char a[6] = {'a', 'b', 'c', 'd', 'e', 'f'};
 unsigned int n[6] = {10, 11, 12, 13, 14, 15};
+
 if (s == 'X')
 {
 for (i = 0; i < 6; i++)
@@ -97,6 +101,7 @@ void lim_itoa(char buf[], char a[], unsigned int n[], unsigned int j, int *bp)
 {
 int i;
 char tmp;
+
 i = 0;
 while (i < 6)
 if (n[i] == j)
