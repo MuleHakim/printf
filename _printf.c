@@ -16,9 +16,7 @@ int _printf(const char *format, ...)
 	va_list arg;
 
 	if (!format)
-	{
 		return (-1);
-	}
 
 	va_start(arg, format);
 	string = format;
@@ -49,17 +47,14 @@ int loop_format(va_list arg, const char *string)
 			i++, flag++;
 			aux = string[i];
 			if (aux == '\0' && _strlen((char *)string) == 1)
-			{
 				return (-1);
-			}
+
 			if (aux == '\0')
-			{
 				return (cont);
-			}
+
 			if (aux == '%')
-			{
 				flag++;
-			}
+
 			else
 			{
 				cont_fm = function_manager(aux, arg);
@@ -68,24 +63,21 @@ int loop_format(va_list arg, const char *string)
 					i++;
 					aux = string[i];
 					if (aux == '%')
-					{
 						flag--;
-					}
+
 					cont = cont + cont_fm;
 				}
 				else if (cont_fm == -1 && aux != '\n')
-				{
 					cont += _putchar('%');
-				}
+
 			}
 		}
 		check_per = check_percent(&flag, aux);
 		cont += check_per;
 
 		if (check_per == 0 && aux != '\0' && aux != '%')
-		{
 			cont += _putchar(aux), i++;
-		}
+		
 		check_per = 0;
 	}
 	return (cont);
