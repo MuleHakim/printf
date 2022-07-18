@@ -31,7 +31,7 @@ void oct_f(char buf[], unsigned int j, int *);
 void hex_f(char buf[], unsigned int j, char s, int *);
 void lim_itoa(char buf[], char a[], unsigned int n[], unsigned int j, int *);
 void add_zeros(char buf[], int n, int p, int *);
-
+int _pow10(int i);
 
 
 /**
